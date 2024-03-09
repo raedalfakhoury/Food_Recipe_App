@@ -12,7 +12,7 @@ const DetailList = () => {
   return (
     <div className={show ? "detailListHide" : "detailList"}>
       <div className="leftDetail">
-        <img src={setDetails.image} alt=""></img>
+        <img className="imgdetail" src={setDetails.image} alt=""></img>
         <button onClick={()=>{
           setShow(!show)
         }} className="Back">Back</button>
@@ -30,7 +30,9 @@ const DetailList = () => {
             cuisineType : <span>{setDetails.cusine}</span>
           </p>
         </div>
+        
         <div className="ingredients">
+        <h2>ingredient</h2>
           <ul>
             {setDetails?.ingredientLines?.map((e, i) => {
               return <li>{e}</li>;
